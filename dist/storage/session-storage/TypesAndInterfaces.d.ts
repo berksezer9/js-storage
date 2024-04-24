@@ -8,7 +8,5 @@ export interface TransferKey {
     recipient: string;
 }
 export type TransferKeys = TransferKey[];
-export type GeneralPrefixes = {
-    [key: string]: string;
-};
+export type GeneralPrefixes = string;
 //# sourceMappingURL=TypesAndInterfaces.d.ts.map
