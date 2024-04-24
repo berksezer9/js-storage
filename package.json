@@ -1,6 +1,6 @@
 {
   "name": "@berksezer9/js-storage",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Storage for JavaScript, current only supports window.sessionStorage.",
   "repository": {
     "type": "git",
