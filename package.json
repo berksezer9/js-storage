@@ -25,7 +25,9 @@
     "build-only": "vite build",
     "tsc-compile": "npx tsc",
     "type-check": "vue-tsc --emitDeclarationOnly --strict",
-    "release": "yarn run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
+    "preversion": "",
+    "version": "yarn run build && git commit -am $npm_package_version && git tag $npm_package_version",
+    "postversion": "git push && git push --tags && npm publish --access public"
   },
   "files": [
     "dist"
