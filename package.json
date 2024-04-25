@@ -1,19 +1,31 @@
 {
   "name": "@berksezer9/js-storage",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Storage for JavaScript, current only supports window.sessionStorage.",
   "repository": {
     "type": "git",
-    "url": "git@github.com:berksezer9/js-storage.git"
+    "url": "git+ssh://git@github.com/berksezer9/js-storage.git"
   },
-  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/berksezer9/js-storage/issues"
+  },
+  "author": "Berk Sezer <berksezer9@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "javascript",
+    "web",
+    "front-end",
+    "storage",
+    "session-storage"
+  ],
   "private": false,
   "scripts": {
     "dev": "vite",
     "build": "run-p build-only type-check tsc-compile",
     "build-only": "vite build",
     "tsc-compile": "npx tsc",
-    "type-check": "vue-tsc --emitDeclarationOnly --strict"
+    "type-check": "vue-tsc --emitDeclarationOnly --strict",
+    "release": "yarn run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
   },
   "files": [
     "dist"
@@ -34,5 +46,7 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.4.3",
     "vite": "^5.2.7"
-  }
+  },
+  "types": "./dist/index.d.ts",
+  "homepage": "https://github.com/berksezer9/js-storage"
 }
