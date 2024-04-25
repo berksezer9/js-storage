@@ -26,7 +26,7 @@
     "tsc-compile": "npx tsc",
     "type-check": "vue-tsc --emitDeclarationOnly --strict",
     "preversion": "",
-    "version": "yarn run build && git commit -am $npm_package_version && git tag $npm_package_version",
+    "version": "yarn run build && git add -A dist",
     "postversion": "git push && git push --tags && npm publish --access public"
   },
   "files": [
